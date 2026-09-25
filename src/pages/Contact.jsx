@@ -57,7 +57,7 @@ function Contact() {
 
             <section>
               <strong>Email</strong>
-              <p>cybershield@example.com</p>
+              <p>thombreprathamesh02@gmail.com</p>
             </section>
 
           </div>
@@ -79,9 +79,31 @@ function Contact() {
         </div>
 
 
-        <form className="contact-form">
+        <form
+          className="contact-form"
+          action="https://formsubmit.co/thombreprathamesh02@gmail.com"
+          method="POST"
+        >
 
           <h2>Send a Message</h2>
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Message from CyberShield Awareness Website"
+          />
+
+          <input
+            type="hidden"
+            name="_captcha"
+            value="false"
+          />
+
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          />
 
           <label>
             Full Name
@@ -89,7 +111,9 @@ function Contact() {
 
           <input
             type="text"
+            name="name"
             placeholder="Enter your name"
+            required
           />
 
 
@@ -99,7 +123,9 @@ function Contact() {
 
           <input
             type="email"
+            name="email"
             placeholder="Enter your email"
+            required
           />
 
 
@@ -108,12 +134,14 @@ function Contact() {
           </label>
 
           <textarea
+            name="message"
             rows="6"
             placeholder="Write your message..."
+            required
           ></textarea>
 
 
-          <button type="button" className="primary-btn">
+          <button type="submit" className="primary-btn">
             <Send size={17} />
             Send Message
           </button>
